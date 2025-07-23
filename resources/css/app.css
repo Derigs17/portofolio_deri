@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#navbar {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+#navbar .nav-link {
+    transition: color 0.2s ease;
+}
+
+#navbar.navbar-light .nav-link {
+    color: #333 !important;
+}
+
+#navbar.navbar-light .nav-link:hover {
+    color: #000 !important;
+}
+
+#navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.dark #navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+#themeToggle i {
+    transition: color 0.3s ease;
+}
+#toggleMode i {
+    transition: color 0.3s ease;
+}
+
+[data-bs-theme="light"] #toggleMode i {
+    color: #000; /* hitam */
+}
+
+[data-bs-theme="dark"] #toggleMode i {
+    color: #fff; /* putih */
+}
+#themeToggle {
+    background-color: #f8f9fa; /* Light background for debug */
+    border: 1px solid #ccc;
+}
+#navbar {
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.scrolled {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
