@@ -12,7 +12,7 @@
                     <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ route('about') }}">Tentang</a>
+                    <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ route('about') }}">Tentang Saya</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('projects') ? 'active' : '' }}" href="{{ route('projects') }}">Project</a>
