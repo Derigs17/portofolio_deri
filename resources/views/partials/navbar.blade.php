@@ -22,6 +22,7 @@
                 </li>
             </ul>
 
+            {{-- Dark mode toggle --}}
             <button id="themeToggle" class="btn ms-3 border-0" style="border-radius: 50%">
                 <img id="themeIcon" src="{{ asset('images/icon-moon.svg') }}" alt="theme" width="24" height="24">
             </button>

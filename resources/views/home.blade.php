@@ -8,7 +8,7 @@
         <img src="{{ asset('images/deri.png') }}" alt="Foto Deri" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
 
-    <h1 class="mt-3 fw-bold" data-aos="fade-up">Halo, saya Deri Gilang Sumudra 👋</h1>
+    <h1 class="mt-5 fw-bold" data-aos="fade-up">Halo, saya Deri Gilang Sumudra 👋</h1>
     <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">Fullstack Web Developer | ReactJS & Laravel Enthusiast</p>
 
     <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap" data-aos="fade-up" data-aos-delay="200">
