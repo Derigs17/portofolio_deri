@@ -30,6 +30,9 @@
         .theme-transition, html, body {
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+        .theme-transition, html, body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
     </style>
 </head>
 
@@ -49,39 +52,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script>
-        AOS.init({ once: true, duration: 700 });
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        const toggle = document.getElementById('themeToggle');
-        const icon = document.getElementById('themeIcon');
-        const html = document.documentElement;
+<script>
+    // ⏱️ Inisialisasi AOS (animasi scroll)
+    AOS.init({
+        once: false, // ⛔ Jangan cuma sekali, biar tiap masuk viewport dia animasi lagi
+        duration: 700,
+    });
 
-        const animateTheme = () => {
-            html.classList.add('theme-transition');
-            setTimeout(() => html.classList.remove('theme-transition'), 300);
-        };
+    const toggle = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+    const html = document.documentElement;
 
-        toggle?.addEventListener('click', () => {
-            const current = html.getAttribute('data-bs-theme');
-            const newTheme = current === 'dark' ? 'light' : 'dark';
+    const animateTheme = () => {
+        html.classList.add('theme-transition');
+        setTimeout(() => html.classList.remove('theme-transition'), 300);
+    };
 
-            animateTheme();
-            html.setAttribute('data-bs-theme', newTheme);
-            icon.src = newTheme === 'dark'
+    toggle?.addEventListener('click', () => {
+        const current = html.getAttribute('data-bs-theme');
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+
+        animateTheme();
+        html.setAttribute('data-bs-theme', newTheme);
+        icon.src = newTheme === 'dark'
+            ? "{{ asset('images/icon-sun.svg') }}"
+            : "{{ asset('images/icon-moon.svg') }}";
+        localStorage.setItem('theme', newTheme);
+
+        // 🔁 Biar animasi AOS muncul ulang setelah ganti tema
+        setTimeout(() => AOS.refresh(), 400);
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const saved = localStorage.getItem('theme');
+        if (saved) {
+            html.setAttribute('data-bs-theme', saved);
+            icon.src = saved === 'dark'
                 ? "{{ asset('images/icon-sun.svg') }}"
                 : "{{ asset('images/icon-moon.svg') }}";
-            localStorage.setItem('theme', newTheme);
-        });
+        }
+    });
+</script>
 
-        window.addEventListener('DOMContentLoaded', () => {
-            const saved = localStorage.getItem('theme');
-            if (saved) {
-                html.setAttribute('data-bs-theme', saved);
-                icon.src = saved === 'dark'
-                    ? "{{ asset('images/icon-sun.svg') }}"
-                    : "{{ asset('images/icon-moon.svg') }}";
-            }
-        });
-    </script>
 </body>
 </html>
