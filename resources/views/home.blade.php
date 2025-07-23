@@ -4,7 +4,12 @@
 
 @section('content')
 <div class="text-center mb-5">
-    <img src="{{ asset('images/deri.png') }}" alt="Foto Deri" width="200" class="mb-3">
+    <div class="text-center">
+    <div style="width: 200px; height: 200px; overflow: hidden; border-radius: 50%; border: 2px solid #000; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+        <img src="{{ asset('images/deri.png') }}" alt="Foto Deri" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+</div>
+   
     <h1>Halo, saya Deri Gilang Sumudra 👋</h1>
     <p class="lead">Fullstack Web Developer | ReactJS & Laravel Enthusiast</p>
 
@@ -36,7 +41,7 @@
     <div class="col-md-4 mb-4">
         <div class="card h-100">
             @if($project->image)
-                <img src="{{ asset('storage/' . $project->image) }}" class="card-img-top" alt="{{ $project->title }}">
+            <img src="{{ asset('storage/' . $project->image) }}" class="card-img-top" alt="{{ $project->title }}">
             @endif
             <div class="card-body">
                 <h5 class="card-title">{{ $project->title }}</h5>

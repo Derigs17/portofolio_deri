@@ -6,7 +6,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end pe-4" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
@@ -21,10 +21,10 @@
                     <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Kontak</a>
                 </li>
             </ul>
-            <button id="themeToggle" class="btn ms-3 border-0" style="border-radius: 50%">
-    <img id="themeIcon" src="{{ asset('images/icon-moon.svg') }}" alt="theme" width="24" height="24">
-</button>
 
+            <button id="themeToggle" class="btn ms-3 border-0" style="border-radius: 50%">
+                <img id="themeIcon" src="{{ asset('images/icon-moon.svg') }}" alt="theme" width="24" height="24">
+            </button>
         </div>
     </div>
 </nav>
