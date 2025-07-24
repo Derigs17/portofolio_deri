@@ -12,7 +12,7 @@
     <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">Fullstack Web Developer | ReactJS & Laravel Enthusiast</p>
 
     <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap" data-aos="fade-up" data-aos-delay="200">
-        <a href="{{ asset('cv/deri-gilang-sumudra-cv.pdf') }}" class="btn btn-dark" download>📄 Download CV</a>
+        <a href="{{ asset('cv/deri-gilang-sumudra-cv.pdf') }}" class="btn btn-outline-secondary"  download>📄 Download CV</a>
         <a href="https://wa.me/6285724523546" class="btn btn-success" target="_blank">💬 WhatsApp</a>
         <a href="https://github.com/Derigs17" class="btn btn-outline-secondary" target="_blank">🐱 GitHub</a>
     </div>
@@ -21,7 +21,7 @@
 <section class="my-5 text-center">
     <h3 class="fw-semibold" data-aos="fade-up">Tentang Saya</h3>
     <p class="mx-auto text-muted" style="max-width: 700px;" data-aos="fade-up" data-aos-delay="100">
-        Saya Deri, Fullstack Web Developer dari Yogyakarta yang fokus pada pengembangan aplikasi berbasis web.
+        Saya Deri, Fullstack Web Developer dari Sukabumi yang fokus pada pengembangan aplikasi berbasis web.
         Saya senang membangun sistem yang bermanfaat seperti manajemen masjid atau dashboard internal.
     </p>
     <a href="{{ route('about') }}" class="btn btn-outline-primary mt-2" data-aos="fade-up" data-aos-delay="200">Selengkapnya</a>
@@ -52,7 +52,7 @@
 <section class="mt-5 text-center">
     <h3 class="mb-4 fw-semibold" data-aos="fade-up">Tech Stack</h3>
     <div class="d-flex flex-wrap justify-content-center gap-2" data-aos="zoom-in" data-aos-delay="100">
-        @foreach(['HTML', 'CSS', 'JavaScript', 'ReactJS', 'Node.js', 'Laravel', 'MySQL', 'Git'] as $tech)
+        @foreach(['HTML', 'CSS', 'JavaScript', 'ReactJS', 'Node.js', 'Express.js', 'PHP', 'Laravel', 'MySQL', 'Git'] as $tech)
             <span class="badge rounded-pill bg-primary px-3 py-2 shadow-sm">{{ $tech }}</span>
         @endforeach
     </div>

@@ -26,7 +26,7 @@
     }
 </style>
 
-<div class="text-center container py-5">
+<div class="text-center container py-3">
     <h2 class="fw-bold mb-4" data-aos="fade-up">Tentang Saya</h2>
 
     {{-- Foto Ganti-Ganti + Glow --}}
