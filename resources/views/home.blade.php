@@ -30,7 +30,7 @@
 <div class="d-flex justify-content-between align-items-center mt-5 mb-3 flex-wrap gap-2">
     <h2 class="fw-semibold mb-0">Project Terbaru</h2>
     <a href="{{ route('projects') }}" class="btn btn-sm btn-outline-primary">Lihat Semua</a>
-</div>
+</div> 
 
 <div class="row">
     @foreach($projects as $project)
