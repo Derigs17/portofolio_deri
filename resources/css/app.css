@@ -34,24 +34,31 @@
 .dark #navbar.scrolled {
     background-color: rgba(0, 0, 0, 0.85) !important;
 }
+
 #themeToggle i {
     transition: color 0.3s ease;
 }
+
 #toggleMode i {
     transition: color 0.3s ease;
 }
 
 [data-bs-theme="light"] #toggleMode i {
-    color: #000; /* hitam */
+    color: #000;
+    /* hitam */
 }
 
 [data-bs-theme="dark"] #toggleMode i {
-    color: #fff; /* putih */
+    color: #fff;
+    /* putih */
 }
+
 #themeToggle {
-    background-color: #f8f9fa; /* Light background for debug */
+    background-color: #f8f9fa;
+    /* Light background for debug */
     border: 1px solid #ccc;
 }
+
 #navbar {
     transition: background-color 0.3s ease;
     backdrop-filter: blur(8px);
@@ -60,8 +67,9 @@
 .scrolled {
     background-color: rgba(0, 0, 0, 0.6) !important;
 }
+
 .card:hover {
     transform: translateY(-5px);
     transition: 0.3s ease-in-out;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
